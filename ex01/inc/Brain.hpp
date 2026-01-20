@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: svolkau <gvardovski@icloud.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 15:02:14 by svolkau           #+#    #+#             */
-/*   Updated: 2026/01/20 15:27:46 by svolkau          ###   ########.fr       */
+/*   Created: 2026/01/20 15:31:00 by svolkau           #+#    #+#             */
+/*   Updated: 2026/01/20 16:20:17 by svolkau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "inc/Dog.hpp"
-#include "inc/Cat.hpp"
+#ifndef BRAIN_CLASS_HPP
+#define BRAIN_CLASS_HPP
 
-int main()
+#include <iostream>
+
+class Brain
 {
-const Animal* meta = new Animal();
-const Animal* j = new Dog();
-const Animal* i = new Cat();
+	protected:
+		std::string ideas[100];
 
-std::cout << j->getType() << " " << std::endl;
-std::cout << i->getType() << " " << std::endl;
+	public:
+		Brain();
+		Brain(const Brain& other);
+		~Brain();
 
-i->makeSound(); 
-j->makeSound();
-meta->makeSound();
+		Brain& operator=(const Brain& other);
 
-delete meta;
-delete j;
-delete i;
+		std::string getIdea(int index) const;
+		void setIdea(int index, const std::string &idea);
+};
 
-return 0;
-}
+#endif

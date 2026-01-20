@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: svolkau <gvardovski@icloud.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/20 15:02:14 by svolkau           #+#    #+#             */
-/*   Updated: 2026/01/20 15:27:46 by svolkau          ###   ########.fr       */
+/*   Created: 2026/01/20 15:05:44 by svolkau           #+#    #+#             */
+/*   Updated: 2026/01/20 16:37:56 by svolkau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "inc/Dog.hpp"
-#include "inc/Cat.hpp"
+#ifndef DOG_CLASS_HPP
+#define DOG_CLASS_HPP
 
-int main()
+#include "Animal.hpp"
+#include "Brain.hpp"
+
+class Dog : public Animal
 {
-const Animal* meta = new Animal();
-const Animal* j = new Dog();
-const Animal* i = new Cat();
+	private:
+		Brain *brain;
 
-std::cout << j->getType() << " " << std::endl;
-std::cout << i->getType() << " " << std::endl;
+   	public:
+		Dog();
+		Dog(const Dog &other);
+		~Dog();
 
-i->makeSound(); 
-j->makeSound();
-meta->makeSound();
+		Dog &operator=(const Dog &other);
 
-delete meta;
-delete j;
-delete i;
+		void makeSound() const;
+		Brain *getBrain() const;
+};
 
-return 0;
-}
+#endif
+
