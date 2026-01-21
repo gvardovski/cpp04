@@ -4,7 +4,9 @@ NAME = animals
 SRC =  main.cpp \
 	src/Animal.cpp \
 	src/Dog.cpp \
-	src/Cat.cpp
+	src/Cat.cpp \
+	src/WrongAnimal.cpp \
+	src/WrongCat.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
