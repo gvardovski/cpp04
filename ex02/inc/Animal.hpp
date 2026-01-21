@@ -6,7 +6,7 @@
 /*   By: svolkau <gvardovski@icloud.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 14:52:55 by svolkau           #+#    #+#             */
-/*   Updated: 2026/01/21 20:36:53 by svolkau          ###   ########.fr       */
+/*   Updated: 2026/01/21 20:40:42 by svolkau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define ANIMAL_CLASS_HPP
 
 #include <iostream>
-#include <string>
 
 class Animal {
 
