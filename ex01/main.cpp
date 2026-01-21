@@ -6,7 +6,7 @@
 /*   By: svolkau <gvardovski@icloud.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 15:02:14 by svolkau           #+#    #+#             */
-/*   Updated: 2026/01/20 16:40:49 by svolkau          ###   ########.fr       */
+/*   Updated: 2026/01/21 20:32:13 by svolkau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,27 @@ int main()
 			animals[i] = new Cat();
 	}
 	for (int i = 0; i < 4; i++) 
-		animals[i]->getBrain()->setIdea(0, "I want to play!");
-	for (int i = 0; i < 4; i++) 
-		std::cout << animals[i]->getType() << " idea[0]: " << animals[i]->getBrain()->getIdea(0) << std::endl;
-	for (int i = 0; i < 4; i++) 
 	{
 		animals[i]->makeSound();
 		delete animals[i];
 	}
+
+	std::cout << "---------------------------------" << std::endl;
+
+	Cat *cat = new Cat();
+	Dog *dog = new Dog();
+
+	cat->getBrain()->setIdea(0, "I want to play with mouse!");
+	dog->getBrain()->setIdea(0, "I want to play with ball!");
+	Cat *catCopy = new Cat(*cat);
+
+	std::cout << cat->getType() << " idea[0]: " << cat->getBrain()->getIdea(0) << std::endl;
+	std::cout << dog->getType() << " idea[0]: " << dog->getBrain()->getIdea(0) << std::endl;
+	std::cout << catCopy->getType() << " idea[0]: " << catCopy->getBrain()->getIdea(0) << std::endl;
+	
+	delete cat;
+	delete dog;
+	delete catCopy;
+
 	return 0;
 }

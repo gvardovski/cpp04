@@ -6,7 +6,7 @@
 /*   By: svolkau <gvardovski@icloud.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 14:59:34 by svolkau           #+#    #+#             */
-/*   Updated: 2026/01/20 16:51:17 by svolkau          ###   ########.fr       */
+/*   Updated: 2026/01/21 19:12:48 by svolkau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,4 @@ std::string Animal::getType() const
 void Animal::makeSound() const 
 {
 	std::cout << "Animal makes a sound" << std::endl;
-}
-
-Brain *Animal::getBrain() const 
-{
-	return NULL;
 }

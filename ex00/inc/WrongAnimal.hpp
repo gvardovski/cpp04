@@ -6,7 +6,7 @@
 /*   By: svolkau <gvardovski@icloud.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 17:30:42 by svolkau           #+#    #+#             */
-/*   Updated: 2026/01/21 17:38:11 by svolkau          ###   ########.fr       */
+/*   Updated: 2026/01/21 18:57:55 by svolkau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 #include <iostream>
 
-class WrongAnimal {
+class WrongAnimal 
+{
 
    protected:
 	std::string type;
@@ -23,12 +24,12 @@ class WrongAnimal {
    public:
 	WrongAnimal();
 	WrongAnimal(const WrongAnimal &other);
-	virtual ~WrongAnimal();
+	~WrongAnimal();
 
 	WrongAnimal &operator=(const WrongAnimal &other);
 
 	std::string getType() const;
-	virtual void makeSound() const;
+	void makeSound() const;
 };
 
 #endif

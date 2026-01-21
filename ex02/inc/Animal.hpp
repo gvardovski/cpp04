@@ -6,7 +6,7 @@
 /*   By: svolkau <gvardovski@icloud.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 14:52:55 by svolkau           #+#    #+#             */
-/*   Updated: 2026/01/20 16:44:42 by svolkau          ###   ########.fr       */
+/*   Updated: 2026/01/21 20:36:53 by svolkau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 #include <iostream>
 #include <string>
-
-class Brain;
 
 class Animal {
 
@@ -32,7 +30,6 @@ class Animal {
 
 	std::string getType() const;
 	virtual void makeSound() const = 0;
-	virtual Brain *getBrain() const = 0;
 };
 
 #endif
